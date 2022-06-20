@@ -1,0 +1,1303 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="796,701.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="나라장터 입찰공고 스크랩 플로우차트" sap:VirtualizedContainerService.HintSize="633.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_Extract1" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">190,2.4</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">250,40 390,40 390,75.6</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">290,75.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">390,128.4 390,195.6</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="무시된 액티비티" sap2010:WorkflowViewState.IdRef="Sequence_83">
+            <Sequence DisplayName="나라장터 검색및 정보 스크랩" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="나라장터 접속 및 검색" sap:VirtualizedContainerService.HintSize="667.2,3245.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: 나라장터: 국가종합전자조달" sap:VirtualizedContainerService.HintSize="625.6,3152.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="592,2936" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="550.4,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                        <uix:NClick ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="550.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.g2b.go.kr/index.jsp" DesignTimeRectangle="1000, 507, 170, 18" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='자세한 검색을 원하시면' parentid='searchForm' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='자세한 검색을 원하시면' parentid='searchForm' tag='IMG' type='' class='' /&gt;" Guid="aadb227b-5dfa-4ace-88dc-1ed6a195e803" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK4AAAAWCAYAAABZlaf2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABEnSURBVGhD7duHk9VVlgdw/ondqq2ZccbVmd2acVxBQgNNQxNFEFBAkmQBFQEBIwYMawAMCIiKYkIUMIEgICoGDChizhLNCiog5nC2P9e6vb95vAaqtnaqrGqrru+9+7vnnnPP+Z7vOfe9pkGrVq2iftSP39po0KZNm2jRokW0bt06TbRs2TLyXFVV1R5z5dbVy9bL/rNlGzRr1izatWuXJk1YUG6uefPm0b179xg+fHgMGTIkevToUXZdubmKioo49thjY+jQoTFgwIB/WNe7d+8YO3ZsnHLKKXHiiSfGSSedFEcddVRa061btzj++OOTziOOOGKvOvY2ZwwbNizt1bFjx/2WZYeznnzyyWXPy3ZnmjBhQowePTqdI9u6PzqKPiV7wgknRNeuXaN9+/ZpnWfmRowYEZ07d97nfubI9+/fP8mwj479scVc3759Y/DgwXHcccdF27Zt61xXOie27CcPWHvTUddc85aVUXXy9Ggz+opo3m3wPmUb+GDSYc8555y49NJL47LLLosLLrggLrnkkrj44otj8uTJcfbZZ6cgPvroo3HbbbelgGVZG48cOTJmzZqVnnXo0CHNjRkzJu6+++546KGHYvr06en1xhtvTMqz7MyZM+Ott95K4+23346HH3442cFxffr0iaeeeipuv/32BB4GF2XpEFA2W3PHHXfEokWLYsGCBXHnnXfGhRdemAAnEPfff38sWbIkOTjL2u+KK66I1atXx3XXXVc7d8stt8TKlStj7ty5MX/+/Hj55ZcTOOkFhCOPPDKd4+mnn052v/nmm8l2719//fV4/PHHY8qUKcm2cjab4yN7rlmzJslk2bVr18Z5550XRx99dJx55pmxYsWKZJ+9sqzzrF+/Pp577rl4/vnnY/HixXHaaaelPYGIL8Tp/PPPT7ZmvRjMPmznGyAt2nfuuefG0qVL0/mrq6vTHEIp+vSuu+5KfuYv8va95pprUtxuuumm9Lncefc5V902Kk+7LSonL4s246+Liq4D01xdsg1M+gCUt956azzyyCPx2GOPxWuvvZacyGkcA5Tjx4+PTZs2pcPJ6CyLyoGbE999993kPHMC8Morr6SgOLDXZcuWJSOwqcBx8rPPPpuCQB8HzJkzJ84444wYNWpUfPTRR/HEE0/Eqaeemgzm/KLeLl26xIwZM9L+DzzwQEoOQPv444+Tzf369UsOfvHFF+Oll16KiRMn1sra7957741PP/00nTPPPfPMMwmMnhlfffVVXHTRRUkvFgYozwHtvvvuS4FjgySkn4/YgOGBqdRmOoDPOb///vt48MEH4+abb06+2bJlS6xbty6xsIR89dVXk1979eqVmBig+YKvss/EA9lIdMzPh5s3b07n5+uslx38zg90SeKiT9nPT+zp1KlTmgPQrVu3pkSRRPaGjXfeeScB2tnZ8P777yc76Cp33n3OVbaKyjMXRP/5b8SAW56LyrGzo0W3QdGqurz/ai9nHINlr7322sROP//8c2zYsCEF7sorr0zZ6KCCcs899yTHZ1mDkzdu3Bg7duxI7I0x7ccRL7zwQsrYInAlyrx589JnTFgc2E52CwIAYjBgwQJFnYZgKqcY56yzzorZs2en5Pn2229TwrGB/WwDJuuK8oLBZskKZEodJnVOIMRcX3/9ddrHeoEHkg8++CDtd8MNN6QEZIPEdk6y7733XowbN662xSkdgMm3/IwwTj/99AR+wP3888+TLJ/yH1ZWOSQg3arYk08+WTskHb9hQpUR+QAuIGqNinrZA4h8WuqLq6++uha4fGGObZ999lksX748+UDlBFTJDMz8w9/OK5bAVdxzv0dV62h+6u0x9sEPYvK6HdFn7rpoMXpmtDx6WFS27bTH+j0uZ4YD/fTTT4l5lGgoV3IAiUM4Sc8oK3MmczKg79y5MzGN1kHpeOONNxJwOVU5zYcDfGyLNazxTBZjMXoxEB0Yl7wgkKGv1GZzEkUZ1NpwNFswA1l779q1K+2NyclaD4QC9eOPP6Yg6K8lh/Zk9+7dKWmwMV8ou/QaAwcOTODAuioK0GMfAPLZeSS/HtP6cjZjR2xmfzZKIPs4L1tUmwxc4MT0mBbDOw+gkN22bVt8+OGH6bySk0wGrkTgk6yXDRIAOzojkGf/eQaU2BhwM1NrG+jCrOKNcNjw5ZdfpvOqdBKYvhzbcudt0faIqDqyd1R07BmtuvSNlp2PjeadeqX35iprXptOnB8jl2yNaW/+FBe/tDu6XrMuKsfMjIpuQ6N1+18rQN5vj8uZ5l6JxwQYEogZIaC5VeBI/S9mldFkMQHjAQR4lDt7yEylTmAz49qPXkwlkzEM8Pzwww/xxRdfJNaytzYAA/3yyy/xySefJIbKstlmDAmEmFdfKeic6r3KQDcASyiAcgZrAUEpBRR2skHAzWMU5/DMYJtWQX8reHyB/aZNm5YSTAIKMHbSF2ubBg0alOyy1mvRZs733uXLnYA/2cZO/mEjorA/UGBHSQCEfEIOI2N7esVCUmsjEI1yjlUlBnvzZY+sqsSXWHLq1Kkp5tmnwCmJABczm3M2wFWJJbrLNRu/+eabRDQSVfXhp9wqlMaIjopB50XDcfOiydnL4/CzlkXjSQ/Uvq+dq3kddvemOGftt3HGmq9jxqafa8C7NpqeODMad6nxZ7tfz5GAa3NKKDMBMPNqSjiwCB6neCagyiFwMhqAZV421MGAFFMBrgsAADgU1nDJyYxLOb1YBltgWMCQ8RzBIeQlBacJKsbWqmRZNgsKe7Gh7LcW8+gdOVn7k5kKKNgxadKkBAJBB1YBFGig1TLYB2NnndoN56IDW2NFjIWNt2/fnhKCnNf83r7ObZ2ExZ5FP6tIKghd2hJgwXTsA1RncBb70IEdgU4CiIFWgY1ssAbzWuNbGXcP+yIBCcwOlZJebItg8r4qophnn2qpMuPSZU5i2ke7Ath8wsYMXO+Blh53DHqKMfKZjsOGTInus9fFuFXb4uQV22LMyv8dYx/clubHrdoeE1bviFMe3hUnLd8RY1ftjPOe3Rm956yNRiNnRaOuw2v3q72coXcTAqSk+k+JFDjOkrWyHGA9B0TZqxfq2bNnbb+We0tgERwAwIILFy6sZVyMQ69LFydylv4KQ+T+EHthHcwhAbAYxsmybAZct177Czr2FhiXQ47P60ovZwLJyZJGsug3gVLZEyiAAyZshnEAUmJJkquuuioxuf4XQABen+fV5zwnGfTpqpcLYtHPyi2Q2IevVBVlHvNirewnCe0ZP/ExWefLCapiXH755UkXIIqJu4jPCERSSjSJw2/iqAKJkSqCyfki+7Tc5Uy7gXD4gx1sdGF0oWYLfyIwbdPeLmf/NWRadJi+Ngbf90H0un1T9Jy3sWZsqHm/MY69Y3P0W/heDLr3oxi+5LMYufTzGLX0izTGP7Irxj/8WfSb+1z8fcTsqKys/BW4/peHA1IumwVZSZFVyhmWyJczTOk9VgNoQXAYAbbeEDAH4wiHLl7Osj5szsnainxjtZYjtBF7u0gYdCtdAihxsBvmt29xSAj7CiK7Ma4AK8WAr6zrp7GxATAYBiMBLlDlJLVWgD23Z10DA/KBXhb7FO3WjkkmuulzRgmuzSDDx5IVQWCyfDnTdjgfPzuLs2NiSW+OH1U7iYON+YTfrNGXS0rrxERC0OO+Yh82lrucSWrx5Yvrr78+JQqfuiyLP3CyiZzY+lw8ax6HDLgkKqasic4LtkbrmzfUjHejTc2ovmVDtLt1Y3SavyW6LHg/jlr0UXS769Podc+2GLrk8xi/eleMWrwljpy6Mv4+cErtfrWXMwHNjT/HY7hc3nPZxMbYCFM4LGABmPVaCGyDKfWpEgCDZeAWL2e5edcKcIQgkAUS36tiBs+OOeaYFDjPMSKDsyybZXaeA06Ak3AY0H55X+XYGbBkbjeyLEZhm9YBcAwAYDcASBqJmHt9rYeSmS8kAJBfDcnuWwgtAxACaV02qyAusVgQgLCf9garOQdmxaRs0ddKVOACSlVGMjkPv1nnfHSym035ciZWWi+JwEb9v3aKDm0GeT2yhDRXvJyxWfKJk6Tw3lzx1y++d8kWbzLlzvvXXufEoZOWRpOZL0Sj6evj8KvXR+Oa0WTG+mhaM5rNXB8Vs16IZvM2R6NF26LJou3Rb8XOGL54a7S7cEkc0mdyHN6p/56/nAkyUHKSjOIk5dbXS4KuNAEyNgZcjCEomEXJBUiXCr+eAKrSIbgcUdfljF7Z7NCcl/sqB5bxOajKqaAyuChrXZ5jm9JoL+Vf0DhbMObV9OzOps9lY1EWy2M8zwHF8N6coH733Xep39cq0OsCBBzsFSivqolXNtiPHfwEWNiuLps9kyiSHFFICs/0qiocQPChwa9kJZAy7f6Rn7GZTt8SeM4GwJVg9EhKvsew2h9tAAZ3OTMH9BKALWJXvJyxWSWGC7FEKqXnAGik5xsNQC133obdT4qDe50fBw+4Mg7sOy3+vd/lcVD/K+JPfabWzv1x4LVx8IyX48Bl38UfFu+OLiu2x98mLIy/9ZoUh1X3+If9ai9nehVZyNnYzhwDHABIOdaNVcYCrn4PcPWygOKrJP0Hp8heB1TCOcKhM3sDLuVZrz4QQ3M2Z2a9jLMf/TIYqM0VZfM6cxKDLnryfP7GQwJwuudKc1GWo7FSXm9vzzIbAjvwqjaeAZfgAzXmk9SSy955AJPyrhVgf10286tE4x+/Fjqndb69cF4VB2hUtfxTqoQGav7SnrEP0ICHLi2BKgO42FmMxENvLk72QUp+hhcrCUG3hCx3OWMz0mCjs0n80nPwW7Y9z5Wet3mLyqhu1zGaVtSwcHW7qKxqE81btoq27X+dq6puH3/q+d/xbzNei4NWRzSs6W//MHRu/Gf3iXF42+7RtmS/2ssZhwAOFshzjBFYhuln8uUMcPV6gGW9Qd5aMhzCcD8r+pYA+xYZ17qsA9D8eoS1Xa58/4lhlU5DJpuTOAwuytKV55R7wZIcpbIC6ftOpbL0l7O69jMn+dgPuPmXM/2xfg9L0eWS52wSEPO6hHrvXM4PfHXpUHaBwa1ce1K0mQ9WrVqVkgJA6SULePzrsgb42gCXUQnleQY1X+RfzqwXIzEs2iJ+AArc3pe7nFmX/SBZtTHlYqSlIqcP35tP65prUQPiA3pcEL+f8UocMHdjHDBibvy5y9hoXAPaqja/Mm1Rdr//rBEwfdWiXxQgbFRuXXHk27OSJ/sdzkWvuEZb4rYKXBySnVEc9LkMFOVKhzJlrT6vVF6y2B+gBLacfLnBfvtpk3KPrdd0llym2Q4opcNlU6uiZy3dNw8s507gl0Lry9kNvJ4DXbk9Sgd2lTz6fb4Vt3Lryg2sTRcSKMpJDq0QXyCXUjsNchIYuIp77u+obFUVvzvq3PiXE+bH70fOiT93OD6aVNfcD6r2/LXU2OufNRbnlBfOwyJAJMv3JYupBcfB/VGOcou1i+s4Ggsqh/ozpUj7UZyT8fTtzT4lUkkrlS3up+yqKnuzuTiHifK3D0qqOQzGHoniIqn85ldJmt+7ALHHV3p16VDa3drZujcf+JyZbF82a3HI+nkWI4vb/p5XFdUn0+dZXoet+U7rU1eMzDkvubp0eK9Fwe7aoaZNm6Y1TZo0qWklWsbv2o2Of+0wMQ6sHhKHNKlh4xoZz60lW9xvv/+ssX6ufu7/OgeggNe4ceM0fD700EPT2sMOaxgHVXSLv7ToHv/RqDIBvFGjRukZ0Furrcn77fHLmQf1c/Vz/x9zgAeAGBcwgdf7hg0bJla1Ps8BLRnz1pIt7rfHL2eZks3ZoHSu3Lp62XrZf7Zs/b85qx+/yVH/b87qZX+Dsq3ifwCbH0meSrqLzAAAAABJRU5ErkJggg==" InformativeScreenshot="567684c68185b5acea7408b86536ef5a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="업무 : 공사, 용역체크&#xA;공고명 : 가스&#xA;공고일 : 오늘기준 -7&#xA;기관명:한국전력공사&#xA;검색클릭&#xA;" BrowserType="Chrome" DisplayName="Attach Browser 입찰공고 검색" sap:VirtualizedContainerService.HintSize="550.4,2152.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="819b0300d91f880fbd54703feaae6818" Selector="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;">
+                          <ui:BrowserScope.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="516.8,1897.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="업무구분 체크" sap:VirtualizedContainerService.HintSize="475.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 업무구분 체크 &quot;공사&quot;" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1" DesignTimeRectangle="585, 439, 16, 20" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='taskClCds3' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='taskClCds3' type='checkbox' tag='INPUT' class='' aaname='공사' /&gt;" Guid="baea8a30-1d07-44bf-9eb5-17aa47d4f175" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACQSURBVEhLY/jy4+9/auJRAynHKAY+f/3+/74Dh/5v37GLIAapA6lH1g/CcAOv3bzzv7a29n9PT8//GTNmEMQgdSD1IH1YDZw6der/tWvX/icFgNSD9GE1sKys7P+dO3egSokDIPUgfTgNvHv3LlQpcQCkftTAUQOpbSBVEzbVsx7VCwcQpmrxRS082A38+x8Ab3X/EajJkocAAAAASUVORK5CYII=" InformativeScreenshot="9a1d3b33b9df36caf1456a4f8e5e3dad.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="605, 440, 30, 15" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='공사' tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='공사' type='' tag='LABEL' class='' check:innerText='공사' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAATCAYAAAD1Yd/KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACHSURBVEhL7ZJBCoAwDATz//d68FIqeyhI3CZpqxLBwyBss2YolW0vNQO/iCa/iIi4sF4E1p2+EU/EOv++CC1mEPEkwCsiEZZFMDQK+8f5q2Hd6cdqERG5ZDpYRS+hS0dFUOjB5oE+Y7M000HDWgaiC1j+uEiUIRGAQg82H4X1b3+ssyQRKfUAsgr71GWr2xMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 업무구분 체크 &quot;용역&quot;" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1" DesignTimeRectangle="655, 534, 16, 20" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='taskClCds5' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='taskClCds5' type='checkbox' tag='INPUT' class='' aaname='용역' /&gt;" Guid="3b9aaa0f-a80c-44f1-b013-2198b6ed8063" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACQSURBVEhLY/jy4+9/auJRAynHKAY+f/3+/74Dh/5v37GLIAapA6lH1g/CcAOv3bzzv7a29n9PT8//GTNmEMQgdSD1IH1YDZw6der/tWvX/icFgNSD9GE1sKys7P+dO3egSokDIPUgfTgNvHv3LlQpcQCkftTAUQOpbSBVEzbVsx7VCwcQpmrxRS082A38+x8Ab3X/EajJkocAAAAASUVORK5CYII=" InformativeScreenshot="595974dd3078ff57ed8aebbb37ac0365.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="675, 535, 30, 15" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='용역' tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='용역' type='' tag='LABEL' class='' check:innerText='용역' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAATCAYAAAD1Yd/KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACPSURBVEhL7dKxCgUhDERR//97t9hGXCwCYXKjVqKwxWkmEzc8Xnne2k7wH6LuOKSUkqL+KtpPD5l9bDS3Yw3NQ6aBobKXzbMPq9DRwKMHDPU7mmmGHQ3UyiPe8Yeo0AkBLM3M3qB5yDTY4ZhDyPAQ//Mq6hvqq7CjgaGyN5uP3HlI1xcy1F9F+3f8Wfep7QMLXsdyJMr/xQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                                <Sequence sap2010:Annotation.AnnotationText="나라장터 공고검색 로직" DisplayName="공고명 검색, 일자입력,기관명입력" sap:VirtualizedContainerService.HintSize="475.2,1696" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="375.2,342.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="키워드 &quot;가스&quot;입력시 검색량 적음" ClickBeforeMode="Single" DisplayName="Type Into '공고명'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Text="가스" Version="V1">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1" DesignTimeRectangle="429, 565, 438, 25" ElementType="InputBox" FriendlyName="'INPUT bidNm'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='w350 mw98p' aaname='공고명' /&gt;" Guid="0f8ea461-086b-48d4-ba8f-e98e1027babc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAdCAYAAADcmalnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEbSURBVHhe7dfBicMwFEXRKSEFuEvVqW6yCCGxZp6Dg03C7PU5B97CEl5f9HO9PYeZmVnVCZ2ZmZXeO3T3xzrWAQDzSsfSs4/Q5TBaa2NZlnG5XMzMzKZa+pWOxTF2W+iSuVx++9HMzGympWfp2il0sb/keu/bNwDMJP1Kx9Kz+AjdXkIAmNWxZUIHQDlCB0BpQgdAaUIHQGlCB0BpQgdAaUIHQGlCB0BpQgdAaUIHQGlCB0BpQgdAaUIHQGlCB0BpQgdAaUIHQGlCB0BpQgdAaf+GblmW7bL3vn0DwEzSr3QsPYtT6Na/g9bau4RmZmazLj1L106huz9y9Ird/rIzMzObaelXOhbp2il0e+xeuQOAOaVjx8hdb8/xC4PiRm445a2RAAAAAElFTkSuQmCC" InformativeScreenshot="8da27403e6fe7ea4083deaf47932d730.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="258, 569, 42, 17" ElementType="Text" FriendlyName="'공고명'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='공고명' check:innerText='공고명' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAVCAYAAAA5BNxZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANdSURBVFhH7ZZBSCJRHMYfBHtYaPcQi9ClYmE3goqFJKI9SB2MYJEgNMhDeAgMojqoHQwPScKAiLA4txGCQUhCVkSSDgN7UBZSPIgdgvXYzWPXb/8zzuSMo5btbuxChx/COO+97/3/3/vesKufd/gfeRH+3LwIf26Mwm9uIZzswbG+1ZvNAI7EBor6cU/lponChYR4PIlwtA0nVlCoqe9UJezMvcVisGRYs0N4A0Koj/A1B2beMLDVBNLaxDK1EvzL9Jz1x7qbQeG6PU46C2Gmy3syiyFVaDkPzzSN9UmQtPWIwaxCG+M2x8HsMaNw6lRaSOKIS/QgBo/dAvYpAKHcHlcQ9jDBbNjPNdtzqULZeztW5GJ9sWGUNjKY8GoFPJ9BWlvsuo7wmgUj60lkdZV7mCbEoB1sOgD+scLH2sJHBhVezEVgfT2PnbPb1rNqCfufGT5685BuzO/3hs6OzwY2F4JQbT/vJ/xe6FOsYhJezMA5NQ5HvN7/cF7fIntZh6R1hazEe2fBbBGIjxE+ZfS7THfhPdJkZXlSGTRqc5n+k3EH84bDpqFseGgWntNG6xlZjNuwYHjNaLGWcAuWDmI4UhPlKBTA4hB11ZOEkKtAPEvAMdZTeAN8vzTpgdOX6up1RTibhFtQhVPq7FPqTGxTqugsVvyegYes11ldNrcFv9blwazShHQpgYtTIgRD2Dmk32gK/AXl9yO8bRL+IwP3B4al40pfixWLJQoDXabHMxC+0eYWqCvH/XJcpizBv9GySDdGViPgizpPdsEkXL5opHr7UulEuT9cSnp0W9Pqpc52jDUKpwni23SI6MC4oxKyuoN0VaPJowESRJ7f0CzSRFZMtSukkID/wNGKME+EMlz/n8ppxZBKkhhQLiLrboqiV1eUah388RadA7lb/Soue9FGVe2V09oFtKDGmpLrb00VepDlGMT7CtLmOQfYOxfCUpdOKle++Xx0VJzS5YDylo1jxUenWvO0+k3BHbqU3cs5rp/kd5HOZWvRvJsxxHMUtbo1w147XpEe51djBJs9XquAo1YP6yukw7qdNGTxH4FEpnmKQfk7yLTmPJwnlCgdhTILVymW65ShGcWzcsZyYglZvf/+BvLFlcuDo/XkFIuf674SO+gp/N/mDr8AOMO4XNg/f4wAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NTypeInto.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NTypeInto>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '공고/개찰일'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Text="[Now.AddDays(-7).ToString(&quot;yyyyMMdd&quot;)]" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1" DesignTimeRectangle="504, 530, 75, 25" ElementType="InputBox" FriendlyName="'2022/05/12'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='dp_date' aaname='공고게시시작일' /&gt;" Guid="741457d1-acf2-4648-8a52-4787490b8395" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAdCAYAAADrcjF6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIwSURBVGhD7ZXLbcMwDEA9o4GskgECr5KMkgySgxfooZdAtURJJilKVKwCTQE+QAd/KJOPtD19fb+crWPL5A0skzewCnnn89mWspIrIs9fMHSSQJN3AJM3gMkbwOQNYPIGMHkDfL68x+Km09Wt8XCcu1um2V2f8XAARd7qrqfJTdO+5hstY73N6PqypZZQYr0UdI3G7twvNM4f5xgitXxeWBe2q9gMSaheuyJv2xQ//Hl187bJ8ojHQcD+UBCZJLRj19tCkg1SlKLo/jwGiuUFcmgz/P5JDpcn549R5HFiN+KmIXnSWUgmyyXQ2ALWiACZEkFOKCjF9MijzciQfWrA/pg35YEcSFBKtlUAji3hU+Xx5/b7pcbgcx3yvKRiuje65MGzMO/JI9MhyWgUIE1WBuLoVMK5LCu+Npo8/I3iUx4aJE1+j7yYP6ZfXkyeT0KXvCKWAj8B9sMIMeicKo9RPJM1AxPubcir5N8pD5KUJkOXJ8XuwOtaJl5OiSSqIW+D/FB4MzBNefX8O+TVg/UfRj3WUxOXmkClCI1RJgbnV31lPdV92vkr8iCYj2uGfcdARupuO5bey6hMCY8hk+VzwUWGPVIDGq+sR5Sn1L7RlhfkbAkWay8ACirPt2OhGOm6T7Y1JfB9jAv/OaMsvFeWVWlGEoRjcg2V/DHK5P0NXlB1So7Ap/KX+EB5fhrq37Ej+Ga0Xr+jfOTk/RdM3gAmbwBRXhJoq72Sq0Kerd71cj89agdRQC9PygAAAABJRU5ErkJggg==" InformativeScreenshot="56b2c77c10c8405b94726fbd8a296a8d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="258, 537, 76, 17" ElementType="Text" FriendlyName="'공고/개찰일'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='공고/개찰일' check:innerText='공고/개찰일' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAVCAYAAADRhGlyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAWgSURBVFhH7VhNSFtZGH1Q6KLQcSGlQ5lFS8HKQC2Figx1EcaFRSihICoYULKoVJAkC40LgwvDBAIiD0rfohCh8BAMEioiBikPXLyMUIMDEgeEcenOZbdnzn25L7nvJ5lUh65cHETfu/d+93zfOd/31L7+8w03uDpuCLwmbgi8Jm4IvCZuCLwmvASeXaDwRwLR0enWmEwjY57DVtf9KJydw1hKIJ6vwDqqIBm5j5dLFSWWS2zr07iradAkukfXsX3aXK9P9aL7jfI3F8c1GPoa4pPTGEutIb9Vg33WfG7vreHlvQHEzQvPOh+B5ygstyHwTRR9PzGwkQ8onijrTipYGGoG3Qr9cyWU/YE7uIC5NAzt8Qz0L1XkUzPecydmMPu+Cuu4ioVhDQ8mN1A+tJAc7EL/vAVL2cvaKyG7+gGZvMA6sgWuc4ng/fKTD6ENr3nitw9KiA/KOHsG8MiNN7XbiNfeyaFf60WscN5YJ/B9Em4RgKjcYmFdBh0GZnb4PrTnaRSOlHUujllNvIAgZpuVoC8qBLpJi+Rg2kxUKwJPa8hP8Ax5eRW3R9ZgHvOdsPgZu5EagHYvioUtWV1CiSvj6NaeIf6pTtjVCGTGDaOEontpBpl9c98ri45wWa+wp2kYIQRam8vo0x5izKgFnn09qSLzugt3hewO21XgJcpbG8iqiWMinggSSaBDmEvgb2lKtIriPq3oLyaP6nH2VCT79bCEWA+rcLG+/5UIdBbdGcDspsyMrJQn73absugIzOh8BNqLZRREJYQ9E/K1/c8Iu4Sxx7wIva4TCTdAj8yMkqxbw0g2KksQqFTpvWlkd/9sJkgpCvtgA9FftIbH/j8Eisv8+hBRnQbre9eD0wts79dguQEJmbx7Vpehn8AjC7MvNDyaoj8GklJvCt2ChM+MgdUoCLzLijLMdcSektgAgVyz+QEx7umQ1DONzKZsep4KrKBo8e9nlyjmx9l4ehFd2YVp1VD8XEJytBfanSgyO5fOvu0JbNF9Xw1xEwbxIDIeeCYQW2qarArnsFtN/3D9yZ9lActMU77BwARsJiz2nOdPyHWSwEYFEQ0ChQ+T1PjreszaYAIZg78PdTm/P5kg6QeMI8zDT+i7KVqMsq92K4L4x2ah/AeBHA/add8WGJun6bciUD2MXVr4zKO3vioTlTlHA+9JBOVLsrITvOzP48js1avAJTBMwnUf5cWfTyP5vtJM7Ok5TCOHsakcCnadwNv+KULCOqii8HED+maVzcz7THTq2Xga2R2pRokWEr6EtW8hr9OIl5Yxu8ifqxsw9kTJh73vRYBAaci/r1S90j/cRZwyFJ7qIZZel52i5LUBxJQqaEegSEb54JwkMO5Vji8hEI0l+S6BpLqnCxaRHpfV2wIPRpZh2DKZEkEC6UkLE6036h7JBTbxI0AgfaZMbyn7sl4uJDhzKVIn7P0NOZNxaGVX9ly0HYES1g4H3pC4VdwOG6SFd5q+Lq5gYS7KsaaVhF2ILLwVmY8gtmp5y/iEQ/ZqmsQIT3KlKw/1ZJqHpcRh9Kd4joerzyQ+cbj9W57F2VAdbaytHL03gaxoGu7ZLjogUEBIsbgXgp1dLIx0tZSwzTlT10PibdzJm2wBL4HCqyK+zx8VjS4mxxFnLqyb9HdhiIPtF3Z0yrqP037HI1EHBNodVGDomR1IWBtMQz9oJ2HRjVOcyTjUvppfR8H1PCHBPXrL4rjzmRPwrCug/HGGeykjUifoRMJOM+nFWN6CGVKF5cAcKuF+JITKuzWCHsgg8yxX9YNcRf/b9eAs971wrILZdis57J0wcJ3nnwlXrEBngLZ8Pu7GFPa+gr45b/UGCZSwj2owN+WHOX0gb1awfdS+efxQUC3bjK8QIIK+vKX+QyGIrEF/D/PAI/Hp2uabnjzonY0xN+gM3/AvJ/wwb6rU+P0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NClick ClickType="Single" DisplayName="Click '기관검색'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1" DesignTimeRectangle="807, 598, 28, 28" ElementType="Button" FriendlyName="'기관검색'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' class='btn_finder' aaname='기관검색 새창' check:text='기관검색' /&gt;" Guid="73864269-fa85-41fc-8889-f07befa46fdd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANTSURBVFhH7ZZXS2NRFIXnx4r4or6IoqAPIjYUG/igqNi7iIiCiuXBEROxEY0aY++9d1njt4eIRofJDZkCMw+LG5Jz1v7O2eXmy9Xds/6k/gP8fQC+lXV9HRuPuPANjoXeAbDIM+eV1xt54fsZxDsASOfnvbq6uoq48MX/bTz0AQBaNlxeXr7q9PRUBwcH2t7e1tramjY2Nuzz/v6+/fZ27WfCD9+QAJaXl/Xw8KCLiwvT2dmZFhcXNTg4qLq6OmVlZSk/P19VVVXq7++Xz+d7Xfsj4YdviAB+23B+fq6TkxNNTU2pubnZNDExoZ2dHe3u7mpsbExNTU1qb2/XysqKgbLnM30H8DsDODw81NzcnBobGzUwMGAnAOjp6cl0dHSkmZkZdXZ2qrKy0lLC74AEyzHA/f29Gfb29qqmpkYLCwt6fHzU9fW1nYhrvbm5MfPR0VFLi8vlspuhJoKFn2MAio08Dw8P27UTGCgKEBGMEy8tLVltkA6/32/fBSssAMyKi4u1urpqJgQlJdxGQIDt7e1pZGRERUVFL602r+Pj4w9yDHB3d/fyXFZJSYk9CUIbjY+Pa3Jy0uR2u634tra2NDQ0ZGsBpHaC9d3PIQDm9fX16u7utlbb3Ny0LqAdSYvH47FbAaa8vFxtbW22jnkRLMcAt7e3Wl9ft+ovLS21E5IK8j07O2sCkFuhDRMTE60G+J3hFCz8HANwtZySQqyurlZfX5+1HSkhECenBTMzMxUTE2MpIC3cFCl7q7AAqHJE0LKyMuXk5Ki2ttZas6ury6DS0tIseFJSknJzc9XR0WHrgQ/sR44B6HEqHNF6dAT9TrvRGZyWyQhQXl6eMjIy1NraapANDQ2WosB+hJ9jAE4RENcKBFU+PT1touUQdQJEYWGhCgoK7Ca4HdYE9jsGYOIR9GfCnHnQ09Oj7OxspaenKzU11Z4VFRUGTDHj90sAEK3I27KlpcVSQUfEx8crISHhdYyHBRAYuaGIU5IiXlwpKSmKiopSdHS0kpOTLRWOAfgDwbvAqQLDKzY2VnFxcfaCom3xcwzA4AlH5J15wNRkMvJdWACcJlIKGcD38q/Vu7Bk7eVyuSMm/PDF/2089A4AsQjSSOuz4OgDwO/Wvw7wrG8odpoD7MiqEAAAAABJRU5ErkJggg==" InformativeScreenshot="9a921406b36257853b1691459c739f3c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="258, 602, 42, 17" ElementType="Text" FriendlyName="'기관명'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='기관명' check:innerText='기관명' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAVCAYAAAA5BNxZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANxSURBVFhH7ZYxaBphGIYPCiUUmgwSUlzSEEil0HSJiNghpIMuQQLBCAlUHFIMlCZDTIaKQySCICIUbwickwiRIBURxeEgw7kk4iDJEKhjNsesb7//7ox3eicxlNBChnfw/vu8577//d7/uIvfd/gf9Qz+1HoGf2qNDS5VU3BNOxDM3RquG+qmg/QXGyxrWZSutde7qFVFpNNZxJJ9JXJN1NrqPS0RO0tTcP1oQOrVkTTgXRQSG7BwHDidJmD3x8FLXfk+qRyHnbNhS+iodbcQDpcHavpaOWpAvO4gsfkWnDuFQg+IJJ5GsWhQw+SKqqCXFQQ/cLDvixDVOiZdx2vlImKJDCIahUNevOYc2DlVOjwMTgDVCnVKXxc5jsP7noPFn0epbQxeE75jjlvGbllpiiwVlJt3w7MegHd1GVZ6kZHgRqrxX2F95Ua4atZxE7WbiKxOwbqZp21/BPhsH5y5YDxw8iYf+gjOGYVwqVwbBS7VM/AsuLF7RrvDvOnksLhHD+xZxXmAxFkTBbEj22AU+D3oQ6wyJKkI3zx7eAXijXJtJLhmTaxn4XkzA2/6CpIMPtP38HQAMZEG0wycLKb1O9PDwW9o6PZp6Ca9iKg2YXoouNS+giBUUGA7RTvX73gDhTqtUyMU8Bms7KUQURMlEj2A6wWHd8EshHITudMMvLMPBu+iJBzIE79C093rNpMenO47icPnJy+SHz2fbXJ3LM4N+besNS8Wp9XODXhcOi8i+EnfWVlLAYTVMBjDKgw6Chf9gXU9q3sQ0xA4H4WvB2mk7SjCxylskd8HwQclSQ3wvCbT00UIv+jlnLQrFKsmOU5qNZE+VLLcup5BrqVZU2VqFarlTyooGdTcW8UMnNaFqNEZosgeYpGqr+mDy/E1QTe+heeQALQnnEZm4Mph0s97nWhe+JADc/6Bk1OVmFNsaf+Wp5nQDGrrCvxRgOZAOchMO84OEr4++ih/FPhIkd0SXkqaDTlphtblI5/D3HYRNc2smQynuUaD2+BLishVKatNVGoNw4ln7D8pSTZTSJcpPhmg+h0TC7nxklzg+0nXNTV/DVw6z8O3YOxRrTxJPYAsgizwFIOTRjUO+I4pUTTdZhob/KKXz0ZDSNteE407LUvN7+E6Vde3KJUrSLA8T+aRplP2/itxQOOD/xO6wx+kDsNUJn/ObwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" sap2010:Annotation.AnnotationText="취급부서 선택 " DisplayName="Attach Window 'chrome.exe [팝업]'" sap:VirtualizedContainerService.HintSize="433.6,763.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="389d7f322efe5404149f1fd3683b621e" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='[팝업] 수요기관찾기 : 나라장터 - Chrome' /&gt;">
+                                    <ui:WindowScope.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="375.2,584.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  instFullNm'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="한국전력공사">
+                                            <ui:TypeInto.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1012ecc9-a403-4b7d-8d75-df58777b6b16" InformativeScreenshot="e1151a6564ea1164ad63a2e9a7c167aa" Selector="&lt;html app='chrome.exe' htmlwindowname='pubOrg_001' title='[팝업] 수요기관찾기 : 나라장터' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:TypeInto.Target>
+                                          </ui:TypeInto>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b7e7ba10-5797-445d-a3b6-1cd0c5ebddf6" InformativeScreenshot="5f58557efd2f29e3b0e704b623fac802" Selector="&lt;html app='chrome.exe' htmlwindowname='pubOrg_001' title='[팝업] 수요기관찾기 : 나라장터' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SPAN' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click  수요기관코드" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0039cb0f-51a4-4759-a191-5193edaaa71a" InformativeScreenshot="f0679be8f544ed90f31f3d4afcf01117" Selector="&lt;html app='chrome.exe' htmlwindowname='pubOrg_001' title='[팝업] 수요기관찾기 : 나라장터' /&gt;&lt;webctrl aaname='수요기관검색결과리스트' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:WindowScope.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:WindowScope>
+                                  <uix:NClick ClickType="Single" DisplayName="Click '검색'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1" DesignTimeRectangle="675, 909, 52, 26" ElementType="Text" FriendlyName="'검색'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl parentid='buttonwrap' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl parentid='buttonwrap' tag='SPAN' type='' class='' aaname='검색' check:innerText='검색' /&gt;" Guid="733c8706-fade-40bb-9417-cfc55320033a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAeCAYAAAB5c901AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAL8SURBVFhH7Zj9T1JRGMf7n84fZFpNfP2hmUqk6Qxi+L6c5UuL5VKTRDHbmsJkoeC8iWIC6VUgjRcnmmjqRPEbV1Eueu4u4la75rN9ds95vs8522fc+wt3cMPrVlDq9f8KHh4eQq//gM7ODknS2tpy8qQKbmyEMTz8EVVVldBq38BoHJUko6MjdMGlJRalpSVob38Fll1MdKVXsVhMWFAuL0cwGEh0pFu3glKvfyboaCZonElsEhU2FKPYEE7suHKgsWgQJ52ZxgtZeiUqeHwci3N0NewNIIRcotiwdj7jaIoL2lPPXe7NxAX1WOfW8Tv559NFVPDoKIpodP/aBPWFKNL7z/f2BoJ6hj/jR39hIfp/8nsM6gt1CHJrpjblfLqICh4c7GN3d/ua+NBXkI8+X7I3VUegsfFmfL0oiM9odL5kb9cGDe8NKEjJ0kNUcG/vN7a2Nq6FpzcPRGOBVZP6yqrHkzNWTR562OTztG+BOu8dPNx6/Dnye9nz+XSIRDbFBXd2thEOr2UM2y0Dkb0Fe6FvUROozLwZtTmRmaEiSljO1mdnzUrkdX9PzKSPqGAk8guhkD8DTFByv5TKRMn8MKsIlCY/3F25ILlauPn5vBYyUgMzd8dZZqqBrGs+5Y50EBXc3AxjddV3JYzPuFewGkZK9rcRFVxfX4PHw2bE5+rUby6V++hk+POfUEWdS/LgNcObF8frXRIXDIUCWFhwZcTw0xy02YQygsohekZlqAL32m30TIDFRbe4oN+/CqdzLiMMFdlotQhlBE8G6BmVAQVyXlromQAu1zdxwZWVH5idtWdEv+IuXowJZQSPdfSMik6O7JYxeiaAwzEjLuj1esEwTEa8l9O/pVOy0DRCP0elpxxZzSZ6JsD09FdxQY9nGVNTNknCMJPigsvLLGy2cUkyOWkVF+T+spiY+CJJrFaLsGBZ2SMMDuoxN+eAz+eVKB66YCAQQEdHGxQKOQyGAbjdLknidM7TBbmKRg9QV1eLkpKHkkZQ8GYU8AcV02x5leCrEQAAAABJRU5ErkJggg==" InformativeScreenshot="ddd1223995d82e2e872c01ae1f5ffcc5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="739, 909, 64, 26" ElementType="Text" FriendlyName="'초기화'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl aaname='초기화' parentid='buttonwrap' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl aaname='초기화' parentid='buttonwrap' tag='SPAN' type='' class='' check:innerText='초기화' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAeCAYAAACVBrgjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANESURBVGhD7ZT9T1JRGMf7n+4fZL7ga/pDc6XOnCU6p5Wvi2m6nObLclMxW1a6KFKWdzMklBCHgKlAGCQipua3e/AS914PHNGWC/hun+3e8zzn7XMZ15CJLBkhimSEKJIRokhcIeHwPoaHh9DT8zgtIJmc1NKFeL1eaLUTqK6uwuDgU8zMvEl5SHh+gS7EYllBRcWtiDmn0ymOpkfiCqmtrYHf7xdH0icZIYpkhCjyfwjxTKCsdAI+8dWnLQPHcTHalsSKEEVvsmEKOTn5JXB8QTwYL5UcXKBlUdnzCS2SeoyHWIr2uMeES47hm2xeHJLplUBC7soUcnx8iMPD8D+GxwOuGYvR96+jKL0xim2+mSIuRunYZqxXth4bkqOjn2whBwf7CIV2k2bhPv3QpxTjmYM+L4JjBCUlI9iI956IZHolkITDIbaQUCiIQGDnrzHfJAhp0lNrUewjRSgescXGbIMoLhqEXVKXCZaup+g9LyR7ez/YQnZ3A/D5PJdG33h6+AYdvR5DhwauHnrp2Jd+FBX2w0aedfXgos8itqFCcI26s71JQBIIfGcL8ft34HZvXozZOvmXjFCAfjOlV0TXwKFwwCwfN/ehsKAPFvJM1ow+i1gGCsA1zMZ6/+xVB52kLxEkOztethCfz4uNDUdSzKjFA6l6YTpTN+KJ6rSe32eU1SLz1K9kYxGMvciXrGXqU4kXpuyj6D0vJB7PNluI270Fu912OfhuqPK6sUirReDRkydc7O4LSk2AOp/MyUMPLx0TYO5Fh2Rzc4MthDRZrSuXw6BBbq4GH+PVhK9cM0mpRaHON6ArNwddBumYQKK9EkDidK6zhbhcDiwvm86N9o7kp3wOcjR66joy9J3Iye7EtCabukaMbDwaP+2dp62TABK7fY0tZH3dDqNx8Wp5247s6+14R6spSaZXAsnqqpUtZG3NBp7nr5bXrcjKasUsraYkmV4J0XszhdhsViwsGFIekpWVz2whVqsFBsOHlIfEbF5iC7FYljE39z7lITGZjPGFVFVVYGrqufAPbIbDsZ7ykGxvb9GFuFwudHVpUFl5G9PTLyOCUh0SIoYqhCQYDEKtvofy8ptpAUlHR1t8IekZ4DceUkva9hksywAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:BrowserScope.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:BrowserScope>
+                        <uix:NExtractData sap2010:Annotation.AnnotationText="업무종류,공고번호, 공고명, 공고기관, 입력일시 스크랩&#xA;" AppendResults="False" ContinueOnError="True" DataTable="[DT_Extract1]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='업무' ReferenceIdx='0' Name='업무'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='공고번호-차수' ReferenceIdx='1' Name='공고번호'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='분류' ReferenceIdx='2' Name='분류' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='공고명' ReferenceIdx='3' Name='공고명'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='공고기관' ReferenceIdx='4' Name='공고기관'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='수요기관' ReferenceIdx='5' Name='수요기관' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='계약방법' ReferenceIdx='6' Name='계약방법' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='입력일시&amp;#xA;(입찰마감일시)' ReferenceIdx='7' Name='입력일시 (입찰마감일시)'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='공동&amp;#xA;수급' ReferenceIdx='8' Name='공동 수급' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='투찰' ReferenceIdx='9' Name='투찰' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='업무' attr='text' /&gt;&lt;column name='공고번호-차수' attr='text' /&gt;&lt;column name='분류' attr='text' /&gt;&lt;column name='공고명' attr='text' /&gt;&lt;column name='공고기관' attr='text' /&gt;&lt;column name='수요기관' attr='text' /&gt;&lt;column name='계약방법' attr='text' /&gt;&lt;column name='입력일시&amp;#xA;(입찰마감일시)' attr='text' /&gt;&lt;column name='공동&amp;#xA;수급' attr='text' /&gt;&lt;column name='투찰' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="550.4,201.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="6a35cd82-8e0e-47b4-b5ff-8c4dd186bfb8" Version="V1">
+                          <uix:NExtractData.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="243, 541, 1000, 2886" FriendlyName="'입찰공고목록조회'" FullSelectorArgument="&lt;webctrl id='sub' tag='FRAME' /&gt;&lt;webctrl src='https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidSearchType=1' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;" Guid="d611f9fa-88fe-43f5-9492-e6839b87d773" InformativeScreenshot="b84d66410f892e72e9353270b0cf5992.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                          </uix:NExtractData.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NExtractData>
+                        <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="검색당일 날짜로 공고스크랩 데이터 저장" DataTable="[DT_Extract1]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="550.4,147.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[&quot;C:\RPA\Making\CCA_나라장터 입찰공고 스크랩 후 이메일 발송\OUTPUT\&quot;+Now.ToString(&quot;yyyyMMdd&quot;) + &quot;공고검색결과.xlsx&quot;]">
+                          <ui:WriteRange.StartingCell>
+                            <InArgument x:TypeArguments="x:String">
+                              <Literal x:TypeArguments="x:String" Value="" />
+                            </InArgument>
+                          </ui:WriteRange.StartingCell>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:WriteRange>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJpSURBVDhPfVNtSFNhFH7KalhQI4lA7dOP2Tbnont393GlooJG9KM0qKT8yu1u121mRRQFK+hH6K+ICoN+BxUVREIg/Qj6URBEQdFEQ7YphFI/bKTk6bx3V0lbPnC43Hue5znnvO+5+Ac7QmvgjTUhEL+LQKIfvlg/1Fgfdp8/jtjz1SbrP1A62uCPf4XaTYdqW+he2UEaKNlHLzjulB6gpoqG4VUBvdlkL4B8qhf1Z8kpReilVaUp2AZnUPV0GjUPc6h5k0P1NMFNr6076YSt8bqpMiGFuoTYLmn0sbjuE6H8MEexmTUwijrHGFx9BCdNWBS6sjEYy2e82mbI2k8Lt31r/d73BKzLJwojDVfzFFyUWu6eTFYGywGPdk1Ur3a3/h5Z5qo3eYsiDedFgkSfV2y/KgzeQj1DVa6TX7j6EpOzKAhHisbgTLPRBzYIjcLfRSul9kEzPx9yhwNK5yN4ou+g6Dfha18rPrO4N4PaX0zQvsHbSRwz8ISPGaJZ+PVNUKJZBLqJ94GgniPI4QGR+g57YxbOHN9AeMgwUHRORnJMuAQlpLJxC4+Xgi9O/DQjwoXYKJi0E7buycCZFcvzRIzA1dkkSvAnmMRmQiiM58Smgehk/2WZsKWdR+BuFK0hb7CAOO/dDGEoaeMgKpqA/T530MbTJJdy9Vfwny4s+jt4V6AmuLWSsiwcz1KotIjzyC+TEhlCgE2UAtXFaHzV3O0DQR+HvYcPUDK0c5BbNzDxsdGmMBJjzYaiT3KuZ9i6y/oD245m4PabqgLw6gp3cYHP4TY8+g021PgXrxApgs02AlupwTMA/AFhHhLmfVes5QAAAABJRU5ErkJggg==" InformativeScreenshot="7f42b80071f57b67c066700af6b7f508.png" Selector="&lt;html app='chrome.exe' title='나라장터: 국가종합전자조달' /&gt;" Url="https://www.g2b.go.kr/index.jsp" />
+                  </uix:NApplicationCard.TargetApp>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NApplicationCard>
+              </Sequence>
+            </Sequence>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">290,195.6</av:Point>
+              <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">390,264.4 360,264.4 360,286.04</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="한국전력 입창공고 검색및 스크랩" sap:VirtualizedContainerService.HintSize="777.6,5466.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:Browser" Name="Browser_kepco" />
+              <Variable x:TypeArguments="sd:DataTable" Name="DT_Read1" />
+              <Variable x:TypeArguments="sd:DataTable" Name="DT_Append1" />
+              <Variable x:TypeArguments="x:String" Name="Text_Info" />
+              <Variable x:TypeArguments="x:String" Name="Text_Vat" />
+              <Variable x:TypeArguments="scg:ICollection(x:String)" Default="[new list(of String)]" Name="List_Vat" />
+              <Variable x:TypeArguments="scg:ICollection(x:String)" Default="[new list(of String)]" Name="List_Info" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="스크랩한 데이터를 DT형태로 Read" DataTable="[DT_Read1]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="736,119.2" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="[&quot;C:\RPA\Making\CCA_나라장터 입찰공고 스크랩 후 이메일 발송\OUTPUT\&quot;+Now.ToString(&quot;yyyyMMdd&quot;) + &quot;공고검색결과.xlsx&quot;]">
+              <ui:ReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ReadRange.Range>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ReadRange>
+            <ui:BuildDataTable sap2010:Annotation.AnnotationText="&quot;입찰정보&quot;,&quot;추정금액&quot;열을 추가할 DT생성&#xA;DT_Append1" DataTable="[DT_Append1]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="736,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;입찰정보&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;추정금액&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:BuildDataTable>
+            <ui:MergeDataTable sap2010:Annotation.AnnotationText="&quot;입찰정보&quot;,&quot;추정금액&quot;열을 기존 DT에 Merge" Destination="[DT_Read1]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="736,165.6" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[DT_Append1]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MergeDataTable>
+            <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="Merge를 수행한 DT를 새롭게 저장" DataTable="[DT_Read1]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="736,147.2" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="공고취합결과" WorkbookPath="[&quot;C:\RPA\Making\CCA_나라장터 입찰공고 스크랩 후 이메일 발송\OUTPUT\&quot;+&quot;스크랩데이터 통합&quot; +Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot;.xlsx&quot;]">
+              <ui:WriteRange.StartingCell>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:WriteRange.StartingCell>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteRange>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" sap2010:Annotation.AnnotationText="한국전력 전자조달 시스템 검색 로직" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: 한국전력 전자조달 시스템" sap:VirtualizedContainerService.HintSize="736,2773.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="575.2,2525.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence sap2010:Annotation.AnnotationText="Main 화면에서 통합공고 검색을 접속" DisplayName="통합공고 접속" sap:VirtualizedContainerService.HintSize="533.6,442.4" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 정보공개" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6fbec66-8372-44c6-89a8-193631dce323" InformativeScreenshot="5980d10e3bdda2f407a2369afef1066a" Selector="&lt;webctrl id='button-1107-btnInnerEl' tag='SPAN' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  menuitem-1109-itemEl'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b04b85c-3493-4248-b246-fb85947b12ca" InformativeScreenshot="5b53c99618a63d550acdb5aedd1055d8" Selector="&lt;webctrl aria-role='menuitem' tag='A' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                    </Sequence>
+                    <Sequence sap2010:Annotation.AnnotationText="" DisplayName="공고번호 입력 후 스크랩" sap:VirtualizedContainerService.HintSize="533.6,1948.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="492,1823.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="검색한 공고번호 마다 데이터 스크랩" DataTable="[DT_Read1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="450.4,1728.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                          <ui:ForEachRow.Body>
+                            <ActivityAction x:TypeArguments="sd:DataRow">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416.8,1580" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  combo-1188-trigger-p...'" sap:VirtualizedContainerService.HintSize="375.2,107.2" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="09e8a222-3185-40ed-b1d5-c75f1bd1214a" InformativeScreenshot="b046000423b2e98d1d7aaae162ed95ed" Selector="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI  boundlist-1189-item0'" sap:VirtualizedContainerService.HintSize="375.2,107.2" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8237bac-55a9-4f01-bdec-62436e553540" InformativeScreenshot="986ee62df4cda3d6efa13fcd7608e45f" Selector="&lt;webctrl tag='LI' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="공고번호에서 &quot;-00&quot;을 제거하는 Method" DelayBetweenKeys="50" DisplayName="Type Into 공고번호 입력" EmptyField="True" sap:VirtualizedContainerService.HintSize="375.2,166.4" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[Row.item(&quot;공고번호&quot;).ToString.Split(&quot;-&quot;c).First+ &quot;[k(enter)]&quot;]">
+                                  <ui:TypeInto.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="847739db-fe9c-4d71-a471-d2eb8b644c53" InformativeScreenshot="51b5d2cd42b29f477a33784c5516b2d1" Selector="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl aria-role='textbox' tableRow='1' tag='INPUT' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:TypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:TypeInto>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="더블클릭" ClickType="CLICK_DOUBLE" DelayBefore="1000" DisplayName="Click 공고번호" sap:VirtualizedContainerService.HintSize="375.2,138.4" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21ac3baa-acd3-4348-9477-95939acfaccf" InformativeScreenshot="8aaf87b1814a4e2e1749ab47b140f558" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템 - Chrome' /&gt;&lt;ctrl name='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' role='document' /&gt;&lt;ctrl name='공고번호, 공고명, 공고부서, 입찰종류, 입찰방법, 낙찰자선정, 입찰신청마감, 투찰시작일시, 투찰종료일시, 공고일자*' role='grouping' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='*' role='cell' /&gt;&lt;ctrl role='grouping' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:Click>
+                                <Sequence sap2010:Annotation.AnnotationText="&quot;분&quot;단위는 &quot;0&quot;으로 고정되어 Get Text 수행하지않음" DisplayName="Text 스크랩" sap:VirtualizedContainerService.HintSize="304.8,1017.6" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_1_1" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_1_2" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_2_1" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_2_2" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_3_1" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_3_2" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_4_1" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_4_2" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_5_1" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_5_2" />
+                                    <Variable x:TypeArguments="x:String" Name="Get_Text_6_1" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="공고일자 스크랩" sap:VirtualizedContainerService.HintSize="263.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetText DisplayName="Get Text '공고일자'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="388, 809, 98, 21" ElementType="InputBox" FriendlyName="'2022/06/14'" FullSelectorArgument="&lt;webctrl id='ext-element-402' tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-element-402' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default  ' aaname='공고일' /&gt;" Guid="bc09637a-fccc-4405-9cb8-2795ba6fe2fd" InformativeScreenshot="d5ee97e2176e56137fb7b7d06977191d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 808, 187, 23" ElementType="Text" FriendlyName="'공고일자'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='공고일자' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGYSURBVHhe7ddBToQwFIBhT+gRXPYK7IYruCMkLtx4AziAWxccg0ncupqM+ixDgRZhUorGmPd/CYlhmMrib6e9EUAp4odaxA+1iB8qZVlG/NCJ+KEW8UMt4odaifE3UhgjZuHKq9Y902urfPE5Y3Kpj+4hpym9zw+1jCM1hRSN+9verQ/ec+7q/6/9rPS+B1zxsyv/sZZ6jPS6tiqC+LtJMgVu2bHy0t0I4p/MxyB+bLE7/qYs7O+AsxLpEuLHXwviv304yf3zWc4f7kaEIP4N2qr+9r24bc+g3/6E2yziR7wg/te3T7l7Osnjy7u7M9cH5++1Fy8/3JE9JwwruZU6aQbdL0VeNfZ9/HGm95ufPYC5jfHvERP/+kHaX/kvh+hhgnXbIzOMxcqPeOnbHrsVmQd6fbUN498k2PZ0E2Q2cbp3uYxN/IiXduD1D6Oe8NC6vooHVzBO3Mq/jvgR7xfjT2H38Lv26sSPeGnxdzZve2Ksr/xxYxM/4qXHD/xzxA+1iB9qET/UIn6oRfxQi/ihFvFDLeKHYiJfi/1ZSP2JPHwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_1_1]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                    <uix:NGetText DisplayName="Get Text '공고일자'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="492, 809, 40, 21" ElementType="InputBox" FriendlyName="'18'" FullSelectorArgument="&lt;webctrl id='ext-element-1543' tableRow='3' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-element-1543' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default ' aaname='공고 시' /&gt;" Guid="cc8d892f-f249-4cd0-9748-cc39d595b14e" InformativeScreenshot="6dabe0973403eebe943f1e7eb42a5114.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 808, 187, 23" ElementType="Text" FriendlyName="'공고일자'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='공고일자' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGYSURBVHhe7ddBToQwFIBhT+gRXPYK7IYruCMkLtx4AziAWxccg0ncupqM+ixDgRZhUorGmPd/CYlhmMrib6e9EUAp4odaxA+1iB8qZVlG/NCJ+KEW8UMt4odaifE3UhgjZuHKq9Y902urfPE5Y3Kpj+4hpym9zw+1jCM1hRSN+9verQ/ec+7q/6/9rPS+B1zxsyv/sZZ6jPS6tiqC+LtJMgVu2bHy0t0I4p/MxyB+bLE7/qYs7O+AsxLpEuLHXwviv304yf3zWc4f7kaEIP4N2qr+9r24bc+g3/6E2yziR7wg/te3T7l7Osnjy7u7M9cH5++1Fy8/3JE9JwwruZU6aQbdL0VeNfZ9/HGm95ufPYC5jfHvERP/+kHaX/kvh+hhgnXbIzOMxcqPeOnbHrsVmQd6fbUN498k2PZ0E2Q2cbp3uYxN/IiXduD1D6Oe8NC6vooHVzBO3Mq/jvgR7xfjT2H38Lv26sSPeGnxdzZve2Ksr/xxYxM/4qXHD/xzxA+1iB9qET/UIn6oRfxQi/ihFvFDLeKHYiJfi/1ZSP2JPHwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_1_2]</OutArgument>
+                                      </uix:NGetText.Text>
+                                    </uix:NGetText>
+                                  </Sequence>
+                                  <Sequence DisplayName="입찰참가신청시작일시 스크랩" sap:VirtualizedContainerService.HintSize="375.2,448" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetText DisplayName="Get Text '입찰참가신청시작일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="388, 836, 98, 21" ElementType="InputBox" FriendlyName="'2022/06/15'" FullSelectorArgument="&lt;webctrl id='ext-element-1546' tableRow='5' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-element-1546' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default  ' aaname='입찰참가신청시작일' /&gt;" Guid="997c1b42-6434-4759-bec6-51a11aff5c6f" InformativeScreenshot="090606dbc4133984b8f56079d5ba013f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 835, 187, 23" ElementType="Text" FriendlyName="'입찰참가신청시작일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰참가신청시작일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALQSURBVHhe7Zc7bhsxEIZzQh8hpa6gTnuFdAsBLtLkBtoDuE2hY8iAW1eGYzMzfKw5Q46WuzLgBPw/gIa1Gr4/zlLfHACdAvlBt0B+0C2QH3TJfr+H/KBPID/oFsgPugXyg27ZKP/Zjbud2/kyuOkxPnYXNx0n+quh+OM5/h+4nMasXsZ5dKMILds8H1PfegxW/1xnpFFIas/qbbTPS8eWY6US69TWQMQfsj6LdQlU19GIBZIN8tPmHpTwhySR3PjLaZCb7kuIlZvGbeg4Kl4S2WaND4nt2EX5SZiifypBIqvdZflnHic3qVAtLq+XkJbqDKl9yP/pbJD/WhY3Np7FyrMYMR8MLU+xcdRmPBj1Dc3HY4s3UP3hJL/5lMyv5mXF+oy+sAbb5Fd1GMjfhJD/7v7F/Xh4da9v8UEVljGXJv8sN15sbhQwXVGqGStutpTSEi9QvEF0LB+82KcXcD4o/LkiP42BhfbP5zFTKSRP88vfgoweA69P6DdcaT76rK3BumsPHT6Oy+bkgfxNCPmfnt/d918v7ufvP/GJRVx0X9QV6IqoOYW0LMi82bF9/9luk+WT2Ty2MwvB7UjBWa5Up5Q/ZXJdrzaGGMMHRByMPDaMJx+jPzAxvpoAVpDmz3MSskP+JjbKv4I8e4qiM+YawuHQ1xgp3jLlnT8XPu9Dtxu+S4LlQq8dQ0lou1wvKbjsU44H8rex4doTuJzi1UDQvvG1rOc3VG24LzqzUjatb67RvyFD/c6/TJFpCR57eFaOwZzXmgSQz6F42zB0ANIzyN/Ehh+8gTZRiRWZ/9YDZcaukcEYb7tM7eOtX3vaMv9VIH8TN8jfKCrJNBbXkzpfL7/dV/tb4nb5p8b1MoH8TXxh5i/v7M1tmtjyV9ulUkjyD2f+8jeOAeRvYrP8APzvQH7QLZAfdAvkB90C+UG3QH7QLZAfdAvkB90C+UHHOPcX5pVE9Dhd4XQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_2_1]</OutArgument>
+                                      </uix:NGetText.Text>
+                                    </uix:NGetText>
+                                    <uix:NGetText DisplayName="Get Text '입찰참가신청시작일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="492, 836, 40, 21" ElementType="InputBox" FriendlyName="'18'" FullSelectorArgument="&lt;webctrl id='ext-element-1546' tableRow='5' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-element-1546' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default ' aaname='입찰참가신청시작 시' /&gt;" Guid="7f9cdc0c-468e-4401-a987-5b1f4e79efa1" InformativeScreenshot="fc1feb0fa09a7de687358ff2a584f4d5.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 835, 187, 23" ElementType="Text" FriendlyName="'입찰참가신청시작일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰참가신청시작일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALQSURBVHhe7Zc7bhsxEIZzQh8hpa6gTnuFdAsBLtLkBtoDuE2hY8iAW1eGYzMzfKw5Q46WuzLgBPw/gIa1Gr4/zlLfHACdAvlBt0B+0C2QH3TJfr+H/KBPID/oFsgPugXyg27ZKP/Zjbud2/kyuOkxPnYXNx0n+quh+OM5/h+4nMasXsZ5dKMILds8H1PfegxW/1xnpFFIas/qbbTPS8eWY6US69TWQMQfsj6LdQlU19GIBZIN8tPmHpTwhySR3PjLaZCb7kuIlZvGbeg4Kl4S2WaND4nt2EX5SZiifypBIqvdZflnHic3qVAtLq+XkJbqDKl9yP/pbJD/WhY3Np7FyrMYMR8MLU+xcdRmPBj1Dc3HY4s3UP3hJL/5lMyv5mXF+oy+sAbb5Fd1GMjfhJD/7v7F/Xh4da9v8UEVljGXJv8sN15sbhQwXVGqGStutpTSEi9QvEF0LB+82KcXcD4o/LkiP42BhfbP5zFTKSRP88vfgoweA69P6DdcaT76rK3BumsPHT6Oy+bkgfxNCPmfnt/d918v7ufvP/GJRVx0X9QV6IqoOYW0LMi82bF9/9luk+WT2Ty2MwvB7UjBWa5Up5Q/ZXJdrzaGGMMHRByMPDaMJx+jPzAxvpoAVpDmz3MSskP+JjbKv4I8e4qiM+YawuHQ1xgp3jLlnT8XPu9Dtxu+S4LlQq8dQ0lou1wvKbjsU44H8rex4doTuJzi1UDQvvG1rOc3VG24LzqzUjatb67RvyFD/c6/TJFpCR57eFaOwZzXmgSQz6F42zB0ANIzyN/Ehh+8gTZRiRWZ/9YDZcaukcEYb7tM7eOtX3vaMv9VIH8TN8jfKCrJNBbXkzpfL7/dV/tb4nb5p8b1MoH8TXxh5i/v7M1tmtjyV9ulUkjyD2f+8jeOAeRvYrP8APzvQH7QLZAfdAvkB90C+UG3QH7QLZAfdAvkB90C+UHHOPcX5pVE9Dhd4XQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_2_2]</OutArgument>
+                                      </uix:NGetText.Text>
+                                    </uix:NGetText>
+                                  </Sequence>
+                                  <Sequence DisplayName="입찰참가신청마감일시 스크랩" sap:VirtualizedContainerService.HintSize="263.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetText DisplayName="Get Text '입찰참가신청마감일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="388, 863, 98, 21" ElementType="InputBox" FriendlyName="'2022/06/22'" FullSelectorArgument="&lt;webctrl tableRow='8' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default  ' aaname='입찰참가신청마감일' /&gt;" Guid="a78ca3bc-93bb-44b4-9563-99e62147fcde" InformativeScreenshot="74631af05129924ebd94b4d2789f9493.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 862, 187, 23" ElementType="Text" FriendlyName="'입찰참가신청마감일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰참가신청마감일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALKSURBVHhe7ZhNbtswEEZ7wh6hS1/BO/sK3QkGssimN7AO0G0XOoYDdJtVkCbs8EfyzHBoUXSLIOD3AAaxQs5I5OOIzhcHQKdAftAtkB90C+QHXbLf7yE/6BPID7oF8oNugfygWxrln9yw27ldaEc3PqXL7uLG00g/NdT/NKXfI5fzwMYxpsENomseczrNufU9lPL7MQPdhcS6ZsdQ155GdxT5qc3Pp+8/63udL2sOxLMdWM5sXiLmPBb6AkmD/CTCQQl/mCWSklzOR7boc4t95aL5GLoftSCUEs/gKnG576r8JEyWn1qUSMUloYczz8I294p405nPjxTXz1e2cVbiQv52GuS/VcUL8nmxeBUjlo2hYuULd90Y9oLy+ynkT9X3KISlkXdU/hb5tdx6DtrkV2M8kL8KIf/Xhxf3/eere31LF0y8jFwa/llKIhY3CTi/9s2KlRZbSmnJeCV7g+i+fuOlnOFIMctEmPJ7sWmjhuvLPVPjm9f32SJ/iqM3nzUH2449lNf3Y88UgPxVCPl/P7+7bz9e3OOvP+lKiTTpoakj0A1ROZm0vrovi53ih8/lmH5zSaFSnEUIH0cK7uWax+TyU/+QU49T97Aif5yXOD7IzCVmmAVgA/Pz+xxCdshfRaP8G+DVUzS+abYSN4eupJmkK+Rnfi48z7FN/vvEi3nz+ZKCh7eqKhbL3yF/FQ3HnsiFvrjl81svn1X1lmOSbqJyxupuL24hf0EG+8xfgbWhK449on9oGwoAj+vjZW8T2gDzNchfRcMX3kidqMSGhb93Q22V36Rwv9XjC/LLN0XEPvbUVf6bQP4q7pC/UtTCwlt8vPzlXNVviX8g/1g5X0UgfxUfWPmt/35UxixSlt+MS80S9X9U/vpjT7ny599xCkD+KprlB+CzA/lBt0B+0C2QH3QL5AfdAvlBt0B+0C2QH3QL5Acd49xfTUoy5h0z8twAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_3_1]</OutArgument>
+                                      </uix:NGetText.Text>
+                                    </uix:NGetText>
+                                    <uix:NGetText DisplayName="Get Text '입찰참가신청마감일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="492, 863, 40, 21" ElementType="InputBox" FriendlyName="'18'" FullSelectorArgument="&lt;webctrl tableRow='8' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default ' aaname='입찰참가신청마감 시' /&gt;" Guid="83eef1d9-c9d9-4695-840f-ee3879ca6e4d" InformativeScreenshot="172c1234a57dbd10f3a07731658e3fd1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 862, 187, 23" ElementType="Text" FriendlyName="'입찰참가신청마감일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰참가신청마감일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALKSURBVHhe7ZhNbtswEEZ7wh6hS1/BO/sK3QkGssimN7AO0G0XOoYDdJtVkCbs8EfyzHBoUXSLIOD3AAaxQs5I5OOIzhcHQKdAftAtkB90C+QHXbLf7yE/6BPID7oF8oNugfygWxrln9yw27ldaEc3PqXL7uLG00g/NdT/NKXfI5fzwMYxpsENomseczrNufU9lPL7MQPdhcS6ZsdQ155GdxT5qc3Pp+8/63udL2sOxLMdWM5sXiLmPBb6AkmD/CTCQQl/mCWSklzOR7boc4t95aL5GLoftSCUEs/gKnG576r8JEyWn1qUSMUloYczz8I294p405nPjxTXz1e2cVbiQv52GuS/VcUL8nmxeBUjlo2hYuULd90Y9oLy+ynkT9X3KISlkXdU/hb5tdx6DtrkV2M8kL8KIf/Xhxf3/eere31LF0y8jFwa/llKIhY3CTi/9s2KlRZbSmnJeCV7g+i+fuOlnOFIMctEmPJ7sWmjhuvLPVPjm9f32SJ/iqM3nzUH2449lNf3Y88UgPxVCPl/P7+7bz9e3OOvP+lKiTTpoakj0A1ROZm0vrovi53ih8/lmH5zSaFSnEUIH0cK7uWax+TyU/+QU49T97Aif5yXOD7IzCVmmAVgA/Pz+xxCdshfRaP8G+DVUzS+abYSN4eupJmkK+Rnfi48z7FN/vvEi3nz+ZKCh7eqKhbL3yF/FQ3HnsiFvrjl81svn1X1lmOSbqJyxupuL24hf0EG+8xfgbWhK449on9oGwoAj+vjZW8T2gDzNchfRcMX3kidqMSGhb93Q22V36Rwv9XjC/LLN0XEPvbUVf6bQP4q7pC/UtTCwlt8vPzlXNVviX8g/1g5X0UgfxUfWPmt/35UxixSlt+MS80S9X9U/vpjT7ny599xCkD+KprlB+CzA/lBt0B+0C2QH3QL5AfdAvlBt0B+0C2QH3QL5Acd49xfTUoy5h0z8twAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_3_2]</OutArgument>
+                                      </uix:NGetText.Text>
+                                    </uix:NGetText>
+                                  </Sequence>
+                                  <Sequence DisplayName="입찰서제출시작일시 스크랩" sap:VirtualizedContainerService.HintSize="263.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetText DisplayName="Get Text '입찰서제출 시작일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="388, 890, 98, 21" ElementType="InputBox" FriendlyName="'2022/06/15'" FullSelectorArgument="&lt;webctrl id='ext-element-1549' tableRow='12' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-element-1549' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default  ' aaname='입찰서제출 시작일' /&gt;" Guid="fc1676dc-7abf-465a-b1bd-29312f40e40a" InformativeScreenshot="435b9cba785ffddb9b7de66ebcd4bd5b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 889, 187, 23" ElementType="Text" FriendlyName="'입찰서제출 시작일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='12' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰서제출 시작일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALMSURBVHhe7ZgxbtwwEEVzwhwh5V5hu9UV0gkCXKTJDXYPkDaFjrEG0roynIThUKQ0Qw4lLqUkSPgfQO9aoEhKevNF+50BoFEgP2gWyA+aBfKDJjmfz5AftAnkB80C+UGzNCb/aPph9N9B61TKbyU6nczJtc7cnv1hcze34WZ/xqTS3a89O29BPT72pp9Pt3Ncwty+ubFHc7vamZ9vpqfPgD1X9BWNr11nHHo7soSv8X7t0nEv/h6IdXvEevj8mcKMr8eBIj6CCvlJvkj4SxBEyq+KcZr61ssfiAstI3/AHu9o7vDpD2+xJf+Cn58Tr5vmFtLyewf5/zQV8q+leCykh9IupKFnLoxkrE5Ny1r5x8EXnZjfXoMvxk4rFMY4pG8HTf7peqJCCSkf5q6UX55DQP4jEPK/f3o1H7+8mbcf/oAKf2AE/10KKQSnh+iEm2TS05PGCkJO3935tqXyWwGcVJHIalJW4tccF0i8dldgdi2ju15WLFrRhoJwbXvbMxVvVFSZvuAxhPzfXn6aD59fzaev3/2RHItw8gFK+ddQ5Z/FSBM0logKq7NFx+WJk38uvtWWJnuAxOtHKkLZh6/dyclFdNfg16/J/whUfFTgNKaQHfIfQaX8DzAnftxi6aigpmNOWr5NSSSyfUPqz/029vyOcmmE1O4alvXqb61ypjRXGl9bNKcsMsh/BBXbnon71b7m/feFyuSPHrQjm6BUJOzNQOc6EXLyy+1TVjZOkrSWeR5FfrdWZXzbypOfC52+bYjl7w/IfwQVf/BOZLcUPLEJJ7bSL0n+FZLk1yhJfk69QMXJn1l3UfKvAvmPYIf8hclfLOMKu+SvSP4Ndstv792+OwL5j+AvJv/2vxln9spfuBUr5bclf3zvskD+I6iW/99hJfmLZQP/Iw3ID4AO5AfNAvlBs0B+0CyQHzQL5AfNAvlBs0B+0DDG/AKjB1iHBeXVHgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_4_1]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                    <uix:NGetText DisplayName="Get Text '입찰서제출 시작일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="492, 890, 40, 21" ElementType="InputBox" FriendlyName="'18'" FullSelectorArgument="&lt;webctrl id='ext-element-1549' tableRow='12' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-element-1549' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default ' aaname='입찰서제출 시작 시' /&gt;" Guid="96e57d2f-1a43-4683-96fa-b7a3ef761183" InformativeScreenshot="3a0e448bef5d429d8415daa676c76c62.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 889, 187, 23" ElementType="Text" FriendlyName="'입찰서제출 시작일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='12' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰서제출 시작일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALMSURBVHhe7ZgxbtwwEEVzwhwh5V5hu9UV0gkCXKTJDXYPkDaFjrEG0roynIThUKQ0Qw4lLqUkSPgfQO9aoEhKevNF+50BoFEgP2gWyA+aBfKDJjmfz5AftAnkB80C+UGzNCb/aPph9N9B61TKbyU6nczJtc7cnv1hcze34WZ/xqTS3a89O29BPT72pp9Pt3Ncwty+ubFHc7vamZ9vpqfPgD1X9BWNr11nHHo7soSv8X7t0nEv/h6IdXvEevj8mcKMr8eBIj6CCvlJvkj4SxBEyq+KcZr61ssfiAstI3/AHu9o7vDpD2+xJf+Cn58Tr5vmFtLyewf5/zQV8q+leCykh9IupKFnLoxkrE5Ny1r5x8EXnZjfXoMvxk4rFMY4pG8HTf7peqJCCSkf5q6UX55DQP4jEPK/f3o1H7+8mbcf/oAKf2AE/10KKQSnh+iEm2TS05PGCkJO3935tqXyWwGcVJHIalJW4tccF0i8dldgdi2ju15WLFrRhoJwbXvbMxVvVFSZvuAxhPzfXn6aD59fzaev3/2RHItw8gFK+ddQ5Z/FSBM0logKq7NFx+WJk38uvtWWJnuAxOtHKkLZh6/dyclFdNfg16/J/whUfFTgNKaQHfIfQaX8DzAnftxi6aigpmNOWr5NSSSyfUPqz/029vyOcmmE1O4alvXqb61ypjRXGl9bNKcsMsh/BBXbnon71b7m/feFyuSPHrQjm6BUJOzNQOc6EXLyy+1TVjZOkrSWeR5FfrdWZXzbypOfC52+bYjl7w/IfwQVf/BOZLcUPLEJJ7bSL0n+FZLk1yhJfk69QMXJn1l3UfKvAvmPYIf8hclfLOMKu+SvSP4Ndstv792+OwL5j+AvJv/2vxln9spfuBUr5bclf3zvskD+I6iW/99hJfmLZQP/Iw3ID4AO5AfNAvlBs0B+0CyQHzQL5AfNAvlBs0B+0DDG/AKjB1iHBeXVHgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_4_2]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                  </Sequence>
+                                  <Sequence DisplayName="입찰서제출마감일시 스크랩" sap:VirtualizedContainerService.HintSize="263.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetText DisplayName="Get Text '입찰서제출 마감일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="388, 792, 98, 21" ElementType="InputBox" FriendlyName="'2022/06/23'" FullSelectorArgument="&lt;webctrl tableRow='14' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default  ' aaname='입찰서제출 마감일' /&gt;" Guid="13677e24-8980-43e4-bf0f-502cb7d22002" InformativeScreenshot="25240eba0fc19bd10af8e092c5be5715.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 791, 187, 23" ElementType="Text" FriendlyName="'입찰서제출 마감일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='14' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰서제출 마감일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALPSURBVHhe7ZhLbtswEIZ7whyhS1/BO+sK3QkCsuimN7AOkG0XOoYDZJtVkKYshw+JQw5lihJapPw/YGKH5kvUxxHtLwqARoH8oFkgP2gWyA+a5Hw+Q37QJpAfNAvkB83SmPyT6ofJvQetUym/luh0UicTnRqfXbG6qXEY9d+YVLrbtQ/aLYjlU6/6ubke4+LHdmH6ntR41SM/j6qnV49uy+qyCOceIoxx6vUIRHwt4VrYmOfK5u1g8wnHz2zM+HoMmbpgExXykxiR8BcvBpf/du2CG+3D1q2X38PHIiFE+T26vKOx/asrlon71r0POfk5t+u49B3Pm8ZmbcO1g/x/mwr504VfhE2lMVC2u/DyeWMkfXVitqyVfxrcpmPj62twm7GTNkrSN/VTIL+eJ+uPrjscu1J+3oaA/EfA5H94fFPfnt7V+4crEAlvGBH+z6VhgtNNNMLZp4ac+akvL6R9b9rrSOXXAhipIpHFTLkVfh3EuvxuDnG5tGn9hjBx/9hjN2+43oRcF2yDyf/y+lt9/fGmvv/85UpyLMKVnflTcscb22d0swWJaGN1etOF8sSZXz52xRHO33NHfteW5mTHiOV0SPJvgRIGbXBaFyY75D+CSvk3MGf8OGLpSCr/VNBChceURCJd12f9ud6dM7+hVJqtmX8b81EsjrBfs27LGpk28+f75wCqjj0W9sVupjLzRzfaYJ4CTjgmv77xYaaltkaEnPx6TskvNy6yAklt1uSnOcX1bZRn/rBfGj99Ik2DL4P8R1DxhdeSPVKEGZswYgv1xONGhqLjQ0nmD6kVKCO/1Fdm3kWZfxXIfwQ75C/M/MUyrrBL/prMv8YB8uu127cikP8I/mHmz/3MKLBX/sKjWBkZ+YXro9iU+eO1ywL5j6Ba/s/DSuYvlg38jzQgPwAykB80C+QHzQL5QbNAftAskB80C+QHzQL5QcMo9QeRyEZ9cmddMgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_5_1]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                    <uix:NGetText DisplayName="Get Text '입찰서제출 마감일시'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="492, 792, 40, 21" ElementType="InputBox" FriendlyName="'12'" FullSelectorArgument="&lt;webctrl tableRow='14' tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='spinbutton' type='text' tag='INPUT' class='x-form-field x-form-text x-form-text-default ' aaname='입찰서제출 마감 시' /&gt;" Guid="aa69cc4b-bac1-47e0-9188-7760d70f0174" InformativeScreenshot="7a360f337c6d1db47faf605d17953681.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 791, 187, 23" ElementType="Text" FriendlyName="'입찰서제출 마감일시'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl tableRow='14' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-399' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='x-form-item-label x-form-item-label-default  x-unselectable' aaname='' check:innerText='입찰서제출 마감일시' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAbCAYAAAAtZ17+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALPSURBVHhe7ZhLbtswEIZ7whyhS1/BO+sK3QkCsuimN7AOkG0XOoYDZJtVkKYshw+JQw5lihJapPw/YGKH5kvUxxHtLwqARoH8oFkgP2gWyA+a5Hw+Q37QJpAfNAvkB83SmPyT6ofJvQetUym/luh0UicTnRqfXbG6qXEY9d+YVLrbtQ/aLYjlU6/6ubke4+LHdmH6ntR41SM/j6qnV49uy+qyCOceIoxx6vUIRHwt4VrYmOfK5u1g8wnHz2zM+HoMmbpgExXykxiR8BcvBpf/du2CG+3D1q2X38PHIiFE+T26vKOx/asrlon71r0POfk5t+u49B3Pm8ZmbcO1g/x/mwr504VfhE2lMVC2u/DyeWMkfXVitqyVfxrcpmPj62twm7GTNkrSN/VTIL+eJ+uPrjscu1J+3oaA/EfA5H94fFPfnt7V+4crEAlvGBH+z6VhgtNNNMLZp4ac+akvL6R9b9rrSOXXAhipIpHFTLkVfh3EuvxuDnG5tGn9hjBx/9hjN2+43oRcF2yDyf/y+lt9/fGmvv/85UpyLMKVnflTcscb22d0swWJaGN1etOF8sSZXz52xRHO33NHfteW5mTHiOV0SPJvgRIGbXBaFyY75D+CSvk3MGf8OGLpSCr/VNBChceURCJd12f9ud6dM7+hVJqtmX8b81EsjrBfs27LGpk28+f75wCqjj0W9sVupjLzRzfaYJ4CTjgmv77xYaaltkaEnPx6TskvNy6yAklt1uSnOcX1bZRn/rBfGj99Ik2DL4P8R1DxhdeSPVKEGZswYgv1xONGhqLjQ0nmD6kVKCO/1Fdm3kWZfxXIfwQ75C/M/MUyrrBL/prMv8YB8uu127cikP8I/mHmz/3MKLBX/sKjWBkZ+YXro9iU+eO1ywL5j6Ba/s/DSuYvlg38jzQgPwAykB80C+QHzQL5QbNAftAskB80C+QHzQL5QcMo9QeRyEZ9cmddMgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_5_2]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                  </Sequence>
+                                  <Sequence DisplayName="추정가격(VAT) 스크랩" sap:VirtualizedContainerService.HintSize="263.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetText DisplayName="Get Text '추정가격(VAT별도)'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_18" ScopeIdentifier="fcc1bf84-397c-4c34-ab5c-a9ab93fdd718" ScrapingMethod="Fulltext" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://srm.kepco.net/index.do" DesignTimeRectangle="343, 662, 121, 14" ElementType="Text" FriendlyName="'20,242,018'" FullSelectorArgument="&lt;webctrl id='ext-element-1557' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='ext-element-1446' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-element-1557' tag='TABLE' /&gt;&lt;webctrl id='ext-element-1446' type='' tag='DIV' class='x-form-field-inputcover-displayEl' /&gt;" Guid="e2431608-121d-4b33-9d78-8ff742bb08d4" InformativeScreenshot="012668c3285fea8f169e81b581a7ab89.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="199, 661, 133, 14" ElementType="Text" FriendlyName="'추정가격(VAT별도)'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-413' tag='TABLE' /&gt;&lt;webctrl parentid='fieldcontainer-1478-labelEl' tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ext-element-413' tag='TABLE' /&gt;&lt;webctrl parentid='fieldcontainer-1478-labelEl' type='' tag='SPAN' class='x-form-item-label-inner x-form-item-label-inner-default' aaname='추정가격(VAT별도)' check:innerText='추정가격(VAT별도)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAASCAYAAABvhf1JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ0SURBVGhD7ZixboMwEED7hf2EjvmM8AvdEFKHLv0DGDt07cBnEKlrpyht3TuDzfk42wGHhFZ+kqUQHGN8785W7lQmEyFLkomSJclEyZJkoqRJcmhU0w6fM/+W2ZK01U7tdp62b1Q39Ovqwn8f5Cpr01Mas1DNAe90qqnGMTVtyfqWynoK98qrSMvnRa9bVVZsEvC+hTNn08x7bpukSqJF4AvCYUJopO8IbWUCL0jCaOsG2iikKwkEDMR8rYRgYODo3HUgiXD47D0PqhlfvmebIEnofTUgeBHrcyMWSgKLPyxGXzH8GUFFotXFvyA0E8OS4HiOFKySWNmEAHR16cxZX0OTKhHvO50XvZYrSVQSoEPhh89bwkpy/3RUj28ndfoevpDQ2YZBphmHmMxismB/yGTMdCdIgUVzA+KTpH+eGZPKNwY5JFtfYcZrc18IMCBKculKgpzb78pYST4+f9TDy1E9v38N36Shzxn8jOI5kxiwj5vxJBh64c21p3LRSgLPoIdqJ9C8spD5tMLWNJUkhFxJ5DOJsD0Kkt6aGZJEssc0J0M9TCSBxYHf8i1BP1OsJGfAth5XBLcSOmKcsTUZvIf4UKD5vBwS3ndF5m03nOALG3oB/IvYyyePIy8a3V54s+NM5mbG4tkqzI+JnlxJKH9ZkkVEJcEA8PMLAL8LZptl5qLR+bDtBtHBhubMWXgHLsXyStIngNiHNisl9K/ZZDbA+pJI2w/u0WtLImU0PteZDwZRkJjNzy+J8NsUyJa4JVaWBMAF92ZOjBRJVggiw//H4rLnztvWrkeaJJvHU8m2CAg+Pbhvg38uSeYSZEkyEZT6BbT30wDfm0btAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[Get_Text_6_1]</OutArgument>
+                                      </uix:NGetText.Text>
+                                    </uix:NGetText>
+                                  </Sequence>
+                                  <Assign sap2010:Annotation.AnnotationText="전체 입찰정보 텍스트 Assign" sap:VirtualizedContainerService.HintSize="263.2,95.2" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[Text_Info]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["공고일자:" + Get_Text_1_1 + " " + Get_Text_1_2 + "시 " + "0" + "분"+ Chr(10)+
+"입찰참가신청시작일시:" + Get_Text_2_1 + " " + Get_Text_2_2 + "시 " + "0" + "분"+Chr(10)+
+"입찰참가신청마감일시:" + Get_Text_3_1 + " " + Get_Text_3_2 + "시 " + "0" + "분"+Chr(10)+
+"입찰서제출시작일시:" + Get_Text_4_1 + " " + Get_Text_4_2 + "시 " + "0" + "분"+Chr(10)+
+"입찰서제출마감일시:" + Get_Text_5_1 + " " + Get_Text_5_2 + "시 " + "0" + "분"]</InArgument>
+                                    </Assign.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Assign>
+                                  <Assign sap2010:Annotation.AnnotationText="추정가격 텍스트 Assign" sap:VirtualizedContainerService.HintSize="263.2,92.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[Text_Vat]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">["추정가격(VAT별도):" + Get_Text_6_1 + "원"]</InArgument>
+                                    </Assign.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Assign>
+                                </Sequence>
+                                <ui:CommentOut sap2010:Annotation.AnnotationText="첨부파일 저장 로직 실패" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="375.2,84" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="592,1004.8" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="첨부파일 저장" sap:VirtualizedContainerService.HintSize="550.4,983.2" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  button-3145-btnIn...'" sap:VirtualizedContainerService.HintSize="508.8,107.2" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b34edde8-ccc6-4ffa-bdbc-39f0e3139ab7" InformativeScreenshot="5ffacbb7eb8284b34a6310b5b7acb6d4" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템 - Chrome' /&gt;&lt;ctrl name='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' role='document' /&gt;&lt;ctrl name=' 인쇄' role='push button' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                        </ui:Click>
+                                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" sap2010:Annotation.AnnotationText="인쇄 페이지 팝업" DisplayName="Attach Window 'chrome.exe 프린트'" sap:VirtualizedContainerService.HintSize="508.8,743.2" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="c8df50c2354e0940660b39cd9ead0307" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='프린트 페이지 | 한국전력공사 전자조달시스템 - Chrome' /&gt;">
+                                          <ui:WindowScope.Body>
+                                            <ActivityAction x:TypeArguments="x:Object">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="475.2,564.8" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="ui:UiElement" Name="Row_file" />
+                                                  <Variable x:TypeArguments="x:Int32" Name="item_Row" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:FindRelative DisplayName="Find Relative Element 'row header  첨부문서'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="FindRelative_1" RelativeElement="[Row_file]">
+                                                  <ui:FindRelative.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </ui:FindRelative.CursorPosition>
+                                                  <ui:FindRelative.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c252017a-28ab-4b8c-8aaf-d4130ed1eccf" InformativeScreenshot="14bab57dc2557fa72310d7509ed96fec" Selector="&lt;ctrl name='프린트 페이지 | 한국전력공사 전자조달시스템' role='document' /&gt;&lt;ctrl idx='2' role='row' /&gt;&lt;ctrl omit:name='1. 기본정보 2. 시간정보 3. 제한정보 4. 필수사항 5. 입찰시 유의사항 1. 전자입찰에 참가하고자 하는 자는*' role='cell' /&gt;&lt;ctrl idx='15' role='row' /&gt;&lt;ctrl idx='2' role='row' /&gt;&lt;ctrl name='첨부문서' role='row header' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:FindRelative.Target>
+                                                </ui:FindRelative>
+                                                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[item_Row]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,324.8" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[Enumerable.Range(0, len( Row_file)).ToString]">
+                                                  <ui:ForEach.Body>
+                                                    <ActivityAction x:TypeArguments="x:Object">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link 붙임'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                          <ui:Click.CursorPosition>
+                                                            <ui:CursorPosition Position="Center">
+                                                              <ui:CursorPosition.OffsetX>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:CursorPosition.OffsetX>
+                                                              <ui:CursorPosition.OffsetY>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:CursorPosition.OffsetY>
+                                                            </ui:CursorPosition>
+                                                          </ui:Click.CursorPosition>
+                                                          <ui:Click.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93a978b1-70a3-4b82-9a2d-5de055246110" InformativeScreenshot="b068e2b5cf6eb7861af7efd1a41c01b1" Selector="&lt;ctrl name='프린트 페이지 | 한국전력공사 전자조달시스템' role='document' /&gt;&lt;ctrl idx='2' role='row' /&gt;&lt;ctrl name='1. 기본정보 2. 시간정보 3. 제한정보 4. 필수사항 5. 입찰시 유의사항 1. 전자입찰에 참가하고자 하는 자는*' role='cell' /&gt;&lt;ctrl idx='15' role='row' /&gt;&lt;ctrl idx='2' role='row' /&gt;&lt;ctrl name='붙임 1. 용역입찰공고문(비데 위탁 관리 용역, 1차).hwp 붙임 2. 비데 위탁 관리 용역 과업지시서.hwp 붙*' role='cell' /&gt;&lt;ctrl name='붙임 1. 용역입찰공고문(비데 위탁 관리 용역, 1차).hwp' role='link' /&gt;">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                              <ui:Target.WaitForReady>
+                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                              </ui:Target.WaitForReady>
+                                                            </ui:Target>
+                                                          </ui:Click.Target>
+                                                        </ui:Click>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ui:ForEach.Body>
+                                                </ui:ForEach>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:WindowScope.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:WindowScope>
+                                      </Sequence>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
+                                <AddToCollection x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="List&lt;String&gt;의형태로 텍스트 입찰정보 저장" Collection="[List_Info]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="375.2,66.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[Text_Info]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </AddToCollection>
+                                <AddToCollection x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="List&lt;String&gt;의형태로 텍스트 추정금액 저장" Collection="[List_Vat]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="375.2,66.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[Text_Vat]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </AddToCollection>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="통합공고 닫기 클릭 AA타입" ClickType="CLICK_SINGLE" DisplayName="Click 통합공고 닫기" sap:VirtualizedContainerService.HintSize="375.2,138.4" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6ed3afb8-b20c-46b9-aa96-f8c9f9b86a52" InformativeScreenshot="3d07f9334105e8a3836ea78285445ec8" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템 - Chrome' /&gt;&lt;ctrl name='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' role='document' /&gt;&lt;ctrl name='통합공고      ' role='grouping' /&gt;&lt;ctrl name='통합공고' role='push button' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:Click>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="통합공고 재접속을 위한 클릭 AA타입" ClickType="CLICK_SINGLE" DisplayName="Click 통합공고" sap:VirtualizedContainerService.HintSize="375.2,138.4" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5183d3cd-3cd2-46a1-af86-574d4ec5eac1" InformativeScreenshot="c6cdb430e92140ff395ba4a21d04589a" Selector="&lt;html app='chrome.exe' title='정보공개 &amp;gt; 통합공고 | 한국전력 전자조달 시스템' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:Click>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEachRow.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ForEachRow>
+                      </Sequence>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG9SURBVDhP3ZJbK0RRGIb3D1EohVy4UO7cSYkLijA3uOHG+TAz7ElDZiakmIzTOJYicm6KHGaMez+DUqOZvdfap5pe61tDDf+Ar9be7d16vrW+932Vf1TM65tP1zVqqeJypApKkK6ptdjQ+DGy2QHun33nqh9aV09W7x95M5ZWJr+wXOndvS8E5a+Pymo4D3FYRycwt/fB5xbB+oahD43JN/P4khJmbjX8G840t8N5eoYTf4Idu4F1eAwjHCEIbGIKbNiNTIsLRmghpKRrG/R8mM8EYe0dwL6KwbmPw7m9h3V6AXN1A9w3DT4dABv1Quvogjj8VUkVlUnwo6IK5lqUusKM7sK+uIbzmBBNHmGfX8Lc3AEPzMEQi/TI1DchVVgKhR70QT95cF5uos322aWESQdqZm7twgiK5utReZi8sTicNHjVXJ1gY155Pe7zw4hswBbXtm/vRIOEHIfGovHyx6XxFR5cCGmtLimMFMitwliOSOFIQCeehJN4FsK2/YBpkQE5JzxqUieLBnMWkWXm9p600BZCkqW/YbJewt8lwqFSSCgsjPQQ4aEQUZhEqEwJipBR2Ch0X9jfL0X5BFiXnC3TykjNAAAAAElFTkSuQmCC" InformativeScreenshot="03a2252e739363b943f19b8b3aea4cbd.png" Selector="&lt;html app='chrome.exe' title='한국전력 전자조달 시스템' /&gt;" Url="https://srm.kepco.net/index.do" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="List&lt;String&gt;을 각 행에 입력하기위한 로직" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="736,1864" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="702.4,1746.4" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="660.8,1653.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[&quot;C:\RPA\Making\CCA_나라장터 입찰공고 스크랩 후 이메일 발송\OUTPUT\&quot;+&quot;스크랩데이터 통합&quot; +Now.ToString(&quot;yyyy-MM-dd&quot;)+&quot;.xlsx&quot;]">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="627.2,1384" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="585.6,1135.2" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;공고취합결과&quot;)]" SaveAfterEachRow="False">
+                              <ueab:ExcelForEachRowX.Body>
+                                <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                  <ActivityAction.Argument1>
+                                    <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                  </ActivityAction.Argument1>
+                                  <ActivityAction.Argument2>
+                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                  </ActivityAction.Argument2>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="552,950.4" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="입찰정보 행 반복입력 수행" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="510.4,408.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[List_Info]">
+                                      <ui:ForEach.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="AddInfo" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="475.2,252.8" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:WriteCellX Cell="[CurrentRow.item(&quot;입찰정보&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[AddInfo]" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEach.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ForEach>
+                                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="추정금액 행 반복입력 수행" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="510.4,408.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[List_Vat]">
+                                      <ui:ForEach.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="AddVat" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="475.2,252.8" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:WriteCellX Cell="[CurrentRow.item(&quot;추정금액&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[AddVat]" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEach.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ForEach>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelForEachRowX.Body>
+                            </ueab:ExcelForEachRowX>
+                            <ueab:AutoFitX Columns="True" DisplayName="Autofit Range" sap:VirtualizedContainerService.HintSize="585.6,116" sap2010:WorkflowViewState.IdRef="AutoFitX_1" Range="[Excel.Sheet(&quot;공고취합결과&quot;)]" Rows="False" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">260,286.04</av:Point>
+                  <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Outlook 메일 발신" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <umab:OutlookApplicationCard Account="yoonkd0211@cocoasoft.co.kr" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="433.6,420.8" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+                  <umab:OutlookApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="375.2,239.2" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendOutlookMail Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[Outlook.SelectedAccount]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;공고검색결과&quot;]" To="[Outlook.SelectedAccount]">
+                          <ui:SendOutlookMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">["C:\RPA\Making\CCA_나라장터 입찰공고 스크랩 후 이메일 발송\OUTPUT\"+"스크랩데이터 통합"+Now.ToString("yyyy-MM-dd")+".xlsx"]</InArgument>
+                            </scg:List>
+                          </ui:SendOutlookMail.Files>
+                        </ui:SendOutlookMail>
+                      </Sequence>
+                    </ActivityAction>
+                  </umab:OutlookApplicationCard.Body>
+                </umab:OutlookApplicationCard>
+              </Sequence>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+  </Flowchart>
+</Activity>
